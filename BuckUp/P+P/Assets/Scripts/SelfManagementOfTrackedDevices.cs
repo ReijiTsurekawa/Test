@@ -1,6 +1,4 @@
-﻿
-/*
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
@@ -58,7 +56,14 @@ public class SelfManagementOfTrackedDevices : MonoBehaviour
                 var absTracking = pose.mDeviceToAbsoluteTracking;
                 var mat = new SteamVR_Utils.RigidTransform(absTracking);
                 targetObjs[i].transform.SetPositionAndRotation(mat.pos, mat.rot);
-                Debug.Log(mat.pos+":"+ mat.rot);
+                
+				//Debug.Log(mat.pos+":"+ mat.rot);
+
+				float test;
+
+				this.GetComponent<InputVive> ().Vive_Y_set(mat.rot.y);
+
+			//	Debug.Log (GetComponent<InputVive> ().Vive_Y_get());
             }
         }
     }
@@ -73,4 +78,3 @@ public class SelfManagementOfTrackedDevices : MonoBehaviour
         }
     }
 }
-*/
