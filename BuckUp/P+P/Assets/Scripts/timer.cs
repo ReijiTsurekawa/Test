@@ -52,8 +52,9 @@ public class timer : MonoBehaviour
                 }
                 break;
             case STEP.PLAY:
-                time = time + Time.deltaTime;
-                timer_text.text ="Time:"+time.ToString();
+                time = (time + Time.deltaTime);
+                int times = (int)time;
+                timer_text.text ="Time:"+times.ToString();
                 GameObject bike = GameObject.Find("Bike");
                 if (bike.GetComponent<bikeMove>().num == 1)
                 {
