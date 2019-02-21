@@ -23,7 +23,7 @@ public class bikeMove : MonoBehaviour
     public float sppedMax;
     public float error;
 
-    Vector3 move = new Vector3(0, 0, 0);
+    Vector3 move = new Vector3(0.0f, 0.0f, 0);
     float rotate = 0;
 
     public int num = 0;
@@ -31,7 +31,7 @@ public class bikeMove : MonoBehaviour
     float ViveY;
     public bool Vive = false;
 
-    int abc=0;
+    int abc = 0;
 
     // Use this for initialization
     void Start()
@@ -40,7 +40,7 @@ public class bikeMove : MonoBehaviour
         GameObject goal = GameObject.Find("goal");
         next_step = STEP.SET;
 
-        
+
     }
 
     void Update()
@@ -63,9 +63,9 @@ public class bikeMove : MonoBehaviour
         step_timer += Time.deltaTime;
         if (next_step != STEP.NONE)
         {
-            step = next_step;            
-            next_step = STEP.NONE;       
-            step_timer = 0.0f;           
+            step = next_step;
+            next_step = STEP.NONE;
+            step_timer = 0.0f;
             switch (step)
             {
                 case STEP.SET:
@@ -83,7 +83,7 @@ public class bikeMove : MonoBehaviour
                 }
                 break;
             case STEP.PLAY:
-         
+
                 Play();
                 break;
             case STEP.CLEAR:
@@ -100,35 +100,31 @@ public class bikeMove : MonoBehaviour
         }
     }
 
-	void Play(){
+    void Play()
+    {
 
-        
+
         float deg = (rotate / 360) * Mathf.PI * 2;
 
         move.x = speedPower * Mathf.Cos(deg);
         move.z = (-1) * speedPower * Mathf.Sin(deg);
 
-        Rigidbody RB = this.GetComponent<Rigidbody>();
+        Rigidbody RB =this.GetComponent<Rigidbody>();
 
         
-
         RB.AddForce(sppedMax * (move - RB.velocity));
 
-
         //RB.AddForce(move);
-         //     Debug.Log(move);
+        Debug.Log(move);
         //Debug.Log(speedPower);
-
-
-
 
         this.transform.rotation = Quaternion.Euler(bikeLean, rotate, 0);
     }
 
     void ViveTrue()
     {
-        float y=this.GetComponent<InputVive>().Vive_Y_get();
-      Debug.Log(y);
+        float y = this.GetComponent<InputVive>().Vive_Y_get();
+        Debug.Log(y);
         if (Input.anyKey)//↑が押されているとき
         {
             speedPower = speedPower + 1f;//加速を上げる
@@ -137,7 +133,7 @@ public class bikeMove : MonoBehaviour
             {
                 speedPower = 100;
             }
-           // Debug.Log(abc + ":" + y);
+            // Debug.Log(abc + ":" + y);
         }
         else
         {
@@ -145,19 +141,19 @@ public class bikeMove : MonoBehaviour
                 speedPower = speedPower - 1f;//加速を下げる
         }
 
-        if (y> error)
+        if (y > error)
         {
             rotate += Mathf.Abs(y * 10);
             bikeLean--;
-            if (bikeLean < -30)
-                bikeLean = -30;
+            if (bikeLean < -10)
+                bikeLean = -10;
         }
-        else if (y<-error)
+        else if (y < -error)
         {
-            rotate -= Mathf.Abs(y*10);
+            rotate -= Mathf.Abs(y * 10);
             bikeLean++;
-            if (bikeLean > 30)
-                bikeLean = 30;
+            if (bikeLean > 10)
+                bikeLean = 10;
         }
         else
         {
@@ -173,7 +169,7 @@ public class bikeMove : MonoBehaviour
                 bikeLean = 0;
             }
         }
-      
+
     }
 
     void ViveFalse()
@@ -194,17 +190,17 @@ public class bikeMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rotate += 1f;
+            rotate += 0.5f;
             bikeLean--;
-            if (bikeLean < -30)
-                bikeLean = -30;
+            if (bikeLean < -10)
+                bikeLean = -10;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rotate -= 1f;
+            rotate -= 0.5f;
             bikeLean++;
-            if (bikeLean > 30)
-                bikeLean = 30;
+            if (bikeLean > 10)
+                bikeLean = 10;
         }
         else
         {
@@ -224,5 +220,5 @@ public class bikeMove : MonoBehaviour
 
 }
 
-	
+
 
