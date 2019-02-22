@@ -190,17 +190,17 @@ public class bikeMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rotate += 0.5f;
+            rotate += 2f;
             bikeLean--;
-            if (bikeLean < -10)
-                bikeLean = -10;
+            if (bikeLean < -15)
+                bikeLean = -15;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rotate -= 0.5f;
+            rotate -= 2f;
             bikeLean++;
-            if (bikeLean > 10)
-                bikeLean = 10;
+            if (bikeLean > 15)
+                bikeLean = 15;
         }
         else
         {

@@ -30,9 +30,9 @@ public class Enemy_Escape : MonoBehaviour
 
             Vector3 pos = Ene.position;
 
-            pos.x -= Bike.x;
-            pos.z -= Bike.z;
-            force = new Vector3(pos.x / 5, 0.0f, pos.z / 5);
+            pos.x += Bike.x;
+            pos.z += Bike.z;
+            force = new Vector3(pos.x, 0.0f, pos.z);
             Debug.Log(force);
             //Ene.position = pos;
 

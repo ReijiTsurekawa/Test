@@ -10,6 +10,7 @@ public class Enemy_pop : MonoBehaviour
     public int PPz, MPz;
     public int maxCount;
     private int count = 0;
+    Vector3 Pos;
 
     public GameObject Ene;
     // Use this for initialization
@@ -32,7 +33,7 @@ public class Enemy_pop : MonoBehaviour
             if (col.tag == "Player")
             {
                 GameObject Enemy = new GameObject("Enemys");
-                Vector3 Pos = Ene.transform.position;
+                Pos = Ene.transform.position;
                 for (int i = 0; i < 3; i++)
                 {
                     float Enex = Random.Range(Pos.x + PPx, Pos.x - MPx);
