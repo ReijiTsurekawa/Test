@@ -115,7 +115,7 @@ public class bikeMove : MonoBehaviour
         RB.AddForce(sppedMax * (move - RB.velocity));
 
         //RB.AddForce(move);
-        Debug.Log(move);
+        //Debug.Log(move);
         //Debug.Log(speedPower);
 
         this.transform.rotation = Quaternion.Euler(bikeLean, rotate, 0);

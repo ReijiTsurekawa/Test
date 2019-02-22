@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Enemy_pop : MonoBehaviour
 {
-    float X = 0.0f;
-    float Z = 0.0f;
-    public int PPx, MPx;//乱数のやつ
-    public int PPz, MPz;
+    float Enex;
+    float Enez;
+    public int xPlus, xMinus;//乱数のやつ
+    public int zPlus, zMinus;
     public int maxCount;
     private int count = 0;
     Vector3 Pos;
@@ -25,25 +25,27 @@ public class Enemy_pop : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerStay(Collider col)
     {
         if (count <= maxCount)
         {
             //　プレイヤーキャラクターを発見
             if (col.tag == "Player")
             {
-                GameObject Enemy = new GameObject("Enemys");
-                Pos = Ene.transform.position;
+               // GameObject Enemy = new GameObject("Enemys");
+                Pos = this.transform.position;
                 for (int i = 0; i < 3; i++)
                 {
-                    float Enex = Random.Range(Pos.x + PPx, Pos.x - MPx);
-                    float Enez = Random.Range(Pos.z + PPz, Pos.z - MPz);
+                    Enex = Random.Range(Pos.x + xPlus, Pos.x - xMinus);
+                    Enez = Random.Range(Pos.z + zPlus, Pos.z - zMinus);
 
-                    GameObject Set = Instantiate(Ene, new Vector3(Enex, 30.0f, Enez), Quaternion.identity);
+                    GameObject Set = Instantiate(Ene, new Vector3(Enex, 10.0f, Enez), Quaternion.identity);
+                    Debug.Log(Enex);
+                    Debug.Log(Enez);
                 }
                 count++;
             }
         }
-        Debug.Log("Encount");
+        //Debug.Log("Encount");
     }
 }
