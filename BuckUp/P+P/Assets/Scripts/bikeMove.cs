@@ -78,7 +78,7 @@ public class bikeMove : MonoBehaviour
             case STEP.START:
                 if (step_timer > 0.1f)
                 {
-                    GetComponent<AudioSource>().Play();
+                    //GetComponent<AudioSource>().Play();
                     next_step = STEP.PLAY;
                 }
                 break;
@@ -102,8 +102,6 @@ public class bikeMove : MonoBehaviour
 
     void Play()
     {
-        transform.Rotate(new Vector3(0, 90, 0));
-
         float deg = (rotate / 360) * Mathf.PI * 2;
 
         move.x = speedPower * Mathf.Cos(deg);

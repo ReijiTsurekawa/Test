@@ -99,12 +99,6 @@
     <Compile Include="Assets\Scripts\playertarget.cs" />
     <Compile Include="Assets\Scripts\score.cs" />
     <Compile Include="Assets\Scripts\SelfManagementOfTrackedDevices.cs" />
-    <Compile Include="Assets\Scripts\Stage_Scripts\destroy.cs" />
-    <Compile Include="Assets\Scripts\Stage_Scripts\flore.cs" />
-    <Compile Include="Assets\Scripts\Stage_Scripts\move.cs" />
-    <Compile Include="Assets\Scripts\Stage_Scripts\xm.cs" />
-    <Compile Include="Assets\Scripts\Stage_Scripts\xp.cs" />
-    <Compile Include="Assets\Scripts\Stage_Scripts\zm.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\time.cs" />
     <Compile Include="Assets\Scripts\timer.cs" />
