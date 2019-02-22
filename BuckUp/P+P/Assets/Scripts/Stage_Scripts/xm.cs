@@ -19,16 +19,18 @@ public class xm : MonoBehaviour
     void Update()
     {
     }
-    public void OnCollisionEnter(Collision col)
+    // public void OnCollisionEnter(Collision col)
+    public void OnTriggerEnter(Collider col)
     {
-            if (col.gameObject.name == "player")
+        //if (col.gameObject.name == "player")
+        if (col.tag == "Player")
+        {
+            if (num == 0)
             {
-                if (num == 0)
-                {
-                    Vector3 pos2 = new Vector3(x + 800, 0, z);
-                    Instantiate(next, pos2, Quaternion.identity);
-                    num++;
-                }
+                Vector3 pos2 = new Vector3(x + 800, 0, z);
+                Instantiate(next, pos2, Quaternion.identity);
+                num++;
             }
+        }
     }
 }

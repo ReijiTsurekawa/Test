@@ -19,10 +19,12 @@ public class zm : MonoBehaviour
     {
 
     }
-    public void OnCollisionEnter(Collision col)
+    // public void OnCollisionEnter(Collision col)
+    public void OnTriggerEnter(Collider col)
 
     {
-        if (col.gameObject.name == "player")
+        //if (col.gameObject.name == "player")
+        if (col.tag == "Player")
         {
             if (num == 0)
             {
