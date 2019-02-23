@@ -79,8 +79,9 @@ GameObject:
   - component: {fileID: 33558675419907652}
   - component: {fileID: 23246939948780552}
   - component: {fileID: 65187469104179422}
-  - component: {fileID: 114669460512882020}
   - component: {fileID: 114717329035323832}
+  - component: {fileID: 114669460512882020}
+  - component: {fileID: 65287952422873850}
   m_Layer: 0
   m_Name: dxp
   m_TagString: Untagged
@@ -335,6 +336,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65287952422873850
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854239794791756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5, z: 1}
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!65 &65809816367151806
 BoxCollider:
   m_ObjectHideFlags: 1

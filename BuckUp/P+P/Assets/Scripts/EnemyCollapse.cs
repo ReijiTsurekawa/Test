@@ -19,9 +19,9 @@ public class EnemyCollapse : MonoBehaviour
     {
 
     }
-    void OnCollisionEnter(Collision otherObj)
+    void OnTriggerEnter(Collider otherObj)
     {
-        if (otherObj.gameObject.tag == "Player")
+        if (otherObj.tag == "Player")
         {
             var instantiateEffect = GameObject.Instantiate(EVE, transform.position + new Vector3(0f, offset, 0f), Quaternion.identity) as GameObject;
             Destroy(instantiateEffect, deleteTime);

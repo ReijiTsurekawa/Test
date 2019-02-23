@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 65993221024545888}
   - component: {fileID: 114680250127169078}
   - component: {fileID: 114749264652464960}
+  - component: {fileID: 65048477630582134}
   m_Layer: 0
   m_Name: flore
   m_TagString: Untagged
@@ -386,6 +387,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1108680279337506}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65048477630582134
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082130140539718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5, z: 1}
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!65 &65052491755469610
 BoxCollider:
   m_ObjectHideFlags: 1

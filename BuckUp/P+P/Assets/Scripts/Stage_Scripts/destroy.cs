@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class destroy : MonoBehaviour {
-    float dead = 10.0f;
+    float dead = 7.0f;
 	void Start () {
+        Invoke("OnTriggerExit",3.0f);
 	}
 	void Update () {
         dead = dead - Time.deltaTime;
@@ -18,7 +19,7 @@ public class destroy : MonoBehaviour {
             dead = time;
         }
 	}
-    void OnTriggerEnter(Collider col)
+    void OnTriggerExit(Collider col)
     {
         //if (col.gameObject.name == "player")
         if (col.tag == "Player")

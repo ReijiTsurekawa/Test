@@ -78,7 +78,7 @@ public class bikeMove : MonoBehaviour
             case STEP.START:
                 if (step_timer > 0.1f)
                 {
-                    //GetComponent<AudioSource>().Play();
+                    GetComponent<AudioSource>().Play();
                     next_step = STEP.PLAY;
                 }
                 break;
@@ -174,10 +174,10 @@ public class bikeMove : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow))//↑が押されているとき
         {
-            speedPower = speedPower + 200f;//加速を上げる
-            if (speedPower >= 1000)
+            speedPower = speedPower + 100f;//加速を上げる
+            if (speedPower >= 800)
             {
-                speedPower = 1000;
+                speedPower = 800;
             }
         }
         else
