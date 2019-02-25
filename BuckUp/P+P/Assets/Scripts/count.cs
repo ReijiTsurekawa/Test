@@ -61,7 +61,7 @@ public class count : MonoBehaviour {
             case STEP.CLEAR:
                 GameObject GM = GameObject.Find("GM");
                 down.color=new Color(255, 0, 0, 1);
-                down.text = "Score:" + GM.GetComponent<GameControl>().score.ToString()+"\nThank you for Playing!";
+                //down.text = "Score:" + GM.GetComponent<GameControl>().score.ToString()+"\nThank you for Playing!";
                 break;
         }
     }

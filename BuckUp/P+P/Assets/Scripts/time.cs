@@ -85,10 +85,11 @@ public class time : MonoBehaviour
                 num = 1;
                 if (step_timer > 5.0f)
                 {
-                    
-                    //SceneManager.LoadScene("title");
+                    SceneManager.LoadScene("result");
                 }
                 break;
         }
+
     }
+ 
 }

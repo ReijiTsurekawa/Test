@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;	// オマジナイ.
 public class score : MonoBehaviour
 {
     public Text score_text;
-    public int s = 0;
+
 
     void Start()
     {
@@ -17,11 +17,13 @@ public class score : MonoBehaviour
     {
         GameObject GM = GameObject.Find("GM");
         score_text.text = "Score:" + GM.GetComponent<GameControl>().score.ToString();
-       // Debug.Log(GM.GetComponent<GameControl>().score.ToString());
+        // Debug.Log(GM.GetComponent<GameControl>().score.ToString());
         GameObject bike = GameObject.Find("player");
         /*if (bike.GetComponent<bikeMove>().num == 1)
         {
             score_text.text = "Finish!";
         }*/
     }
+
+
 }

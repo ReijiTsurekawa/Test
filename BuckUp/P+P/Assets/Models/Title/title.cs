@@ -37,16 +37,7 @@ public class title : MonoBehaviour
         {
             text.color = new Color(0, 0, 0, 0);
             next = next - Time.deltaTime;
-            if (next <= 0.3f)
-            {
-                if (num2 == 0)
-                {
-                    GameObject drink = GameObject.Find("drink");
-                    drink.GetComponent<AudioSource>().Play();
-                    num2++;
-                }
-            }
-            if (next <= 0.0f)
+                        if (next <= 0.0f)
             {
                 SceneManager.LoadScene("Main");
             }

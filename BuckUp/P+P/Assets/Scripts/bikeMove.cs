@@ -184,7 +184,7 @@ public class bikeMove : MonoBehaviour
         else
         {
             if (speedPower != 0)
-                speedPower = speedPower - 1f;//加速を下げる
+                speedPower = speedPower - 10f;//加速を下げる
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
