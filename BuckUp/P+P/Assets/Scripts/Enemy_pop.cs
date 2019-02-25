@@ -14,7 +14,7 @@ public class Enemy_pop : MonoBehaviour
 
     public GameObject Ene;
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerStay(Collider col)
     {
         if (count <= maxCount)
         {

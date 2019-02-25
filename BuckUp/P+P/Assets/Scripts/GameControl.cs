@@ -12,7 +12,7 @@ public class GameControl : MonoBehaviour
 
     void Start()
     {
-        text_score.color = new Color(0, 0, 0);
+        text_score.color = new Color(255, 255, 255);
     }
 
     void Update()
@@ -26,7 +26,7 @@ public class GameControl : MonoBehaviour
     }
     public void plusScore()
     {
-        score++;
+        score+=100;
         print(score);
         GetComponent<AudioSource>().Play();
     }

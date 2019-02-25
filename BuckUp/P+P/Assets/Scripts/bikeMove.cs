@@ -37,7 +37,7 @@ public class bikeMove : MonoBehaviour
     void Start()
     {
         rotate = 0;
-        GameObject goal = GameObject.Find("goal");
+   
         next_step = STEP.SET;
 
 
@@ -142,7 +142,7 @@ public class bikeMove : MonoBehaviour
         if (y > error)
         {
             rotate += Mathf.Abs(y * 10);
-            bikeLean--;
+            bikeLean--; 
             if (bikeLean < -10)
                 bikeLean = -10;
         }
@@ -152,6 +152,7 @@ public class bikeMove : MonoBehaviour
             bikeLean++;
             if (bikeLean > 10)
                 bikeLean = 10;
+
         }
         else
         {
@@ -190,6 +191,7 @@ public class bikeMove : MonoBehaviour
         {
             rotate += 2f;
             bikeLean--;
+            
             if (bikeLean < -15)
                 bikeLean = -15;
         }
@@ -197,6 +199,7 @@ public class bikeMove : MonoBehaviour
         {
             rotate -= 2f;
             bikeLean++;
+            
             if (bikeLean > 15)
                 bikeLean = 15;
         }

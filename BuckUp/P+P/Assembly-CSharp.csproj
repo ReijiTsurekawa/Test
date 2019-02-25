@@ -62,6 +62,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ballon.cs" />
+    <Compile Include="Assets\Models\Title\bikeSride.cs" />
+    <Compile Include="Assets\Models\Title\title.cs" />
     <Compile Include="Assets\Plefabs\Stage_Prefabs\xm2.cs" />
     <Compile Include="Assets\Plefabs\Stage_Prefabs\xp2.cs" />
     <Compile Include="Assets\Plefabs\Stage_Prefabs\zm2.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="Assets\Scripts\g.cs" />
     <Compile Include="Assets\Scripts\GameControl.cs" />
     <Compile Include="Assets\Scripts\InputVive.cs" />
+    <Compile Include="Assets\Scripts\Kin_Del.cs" />
     <Compile Include="Assets\Scripts\LookMe.cs" />
     <Compile Include="Assets\Scripts\playerCamera.cs" />
     <Compile Include="Assets\Scripts\playertarget.cs" />
@@ -113,7 +116,7 @@
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\time.cs" />
     <Compile Include="Assets\Scripts\timer.cs" />
-    <Compile Include="Assets\Scripts\title.cs" />
+    <Compile Include="Assets\Scripts\title1.cs" />
     <Compile Include="Assets\Scripts\ViveTracker_input.cs" />
     <Compile Include="Assets\Stage\xMinus_Floor.cs" />
     <Compile Include="Assets\Stage\xPlus_Floor.cs" />

@@ -15,8 +15,8 @@ public class BulletControl : MonoBehaviour
         if (col.gameObject.name == "Bike")
         {
             GameObject GM = GameObject.Find("GM");
-            GetComponent<AudioSource>().Play();
             GM.GetComponent<GameControl>().plusScore();
+            GetComponent<AudioSource>().Play();
             Destroy(gameObject);
         }
     }

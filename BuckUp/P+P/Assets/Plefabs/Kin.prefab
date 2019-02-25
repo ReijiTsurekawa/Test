@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 65236268677861832}
   - component: {fileID: 65240257366484624}
   - component: {fileID: 114832301127913718}
+  - component: {fileID: 114833047899298396}
   m_Layer: 0
   m_Name: Kin
   m_TagString: Untagged
@@ -957,6 +958,18 @@ MonoBehaviour:
   EVE: {fileID: 1548511643153150, guid: 21098c3c01c93d843a568392a3048789, type: 2}
   offset: 1
   deleteTime: 1
+--- !u!114 &114833047899298396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1509912440032378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b187c20efe60249ab6d2bd81b35225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delTime: 60
 --- !u!137 &137167005040159014
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

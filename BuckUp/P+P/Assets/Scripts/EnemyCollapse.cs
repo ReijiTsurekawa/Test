@@ -19,13 +19,17 @@ public class EnemyCollapse : MonoBehaviour
     {
 
     }
-    void OnTriggerEnter(Collider otherObj)
+    void OnTriggerEnter(Collider col)
     {
-        if (otherObj.tag == "Player")
+        if (col.tag == "Player")
         {
             var instantiateEffect = GameObject.Instantiate(EVE, transform.position + new Vector3(0f, offset, 0f), Quaternion.identity) as GameObject;
+            GameObject GM = GameObject.Find("GM");
+            GM.GetComponent<GameControl>().plusScore();
             Destroy(instantiateEffect, deleteTime);
-            Destroy(this.gameObject, 0.1f);
+            Destroy(this.gameObject, 0.05f);
+
+
         }
     }
 }

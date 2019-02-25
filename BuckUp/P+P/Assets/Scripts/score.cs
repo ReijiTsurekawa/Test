@@ -11,17 +11,17 @@ public class score : MonoBehaviour
 
     void Start()
     {
-        score_text.color = new Color(0, 0, 0);
+        score_text.color = new Color(255, 255, 255);
     }
     private void Update()
     {
         GameObject GM = GameObject.Find("GM");
         score_text.text = "Score:" + GM.GetComponent<GameControl>().score.ToString();
        // Debug.Log(GM.GetComponent<GameControl>().score.ToString());
-        GameObject bike = GameObject.Find("Bike");
-        if (bike.GetComponent<bikeMove>().num == 1)
+        GameObject bike = GameObject.Find("player");
+        /*if (bike.GetComponent<bikeMove>().num == 1)
         {
             score_text.text = "Finish!";
-        }
+        }*/
     }
 }
