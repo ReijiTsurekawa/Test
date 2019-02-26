@@ -37,10 +37,7 @@ public class bikeMove : MonoBehaviour
     void Start()
     {
         rotate = 0;
-   
         next_step = STEP.SET;
-
-
     }
 
     void Update()
@@ -65,7 +62,7 @@ public class bikeMove : MonoBehaviour
         {
             step = next_step;
             next_step = STEP.NONE;
-            step_timer = 0.0f;
+            step_timer = 5.0f;
             switch (step)
             {
                 case STEP.SET:
@@ -76,10 +73,13 @@ public class bikeMove : MonoBehaviour
         switch (step)
         {
             case STEP.START:
-                if (step_timer > 0.1f)
+                if (speedPower > 0)
+                    speedPower = 0;
+                if (step_timer > 5.0f)
                 {
                     GetComponent<AudioSource>().Play();
                     next_step = STEP.PLAY;
+                    Debug.Log("test");
                 }
                 break;
             case STEP.PLAY:
@@ -89,6 +89,8 @@ public class bikeMove : MonoBehaviour
             case STEP.CLEAR:
                 Debug.Log("CLEAR");
                 num = 1;
+                if (speedPower > 0)
+                    speedPower = 0;
                 break;
         }
     }
@@ -107,9 +109,9 @@ public class bikeMove : MonoBehaviour
         move.x = speedPower * Mathf.Cos(deg);
         move.z = (-1) * speedPower * Mathf.Sin(deg);
 
-        Rigidbody RB =this.GetComponent<Rigidbody>();
+        Rigidbody RB = this.GetComponent<Rigidbody>();
 
-        
+
         RB.AddForce(sppedMax * (move - RB.velocity));
 
         //RB.AddForce(move);
@@ -142,7 +144,7 @@ public class bikeMove : MonoBehaviour
         if (y > error)
         {
             rotate += Mathf.Abs(y * 10);
-            bikeLean--; 
+            bikeLean--;
             if (bikeLean < -10)
                 bikeLean = -10;
         }
@@ -191,7 +193,7 @@ public class bikeMove : MonoBehaviour
         {
             rotate += 2f;
             bikeLean--;
-            
+
             if (bikeLean < -15)
                 bikeLean = -15;
         }
@@ -199,7 +201,7 @@ public class bikeMove : MonoBehaviour
         {
             rotate -= 2f;
             bikeLean++;
-            
+
             if (bikeLean > 15)
                 bikeLean = 15;
         }

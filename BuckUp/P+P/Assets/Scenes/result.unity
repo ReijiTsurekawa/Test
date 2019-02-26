@@ -484,7 +484,6 @@ GameObject:
   - component: {fileID: 1362008878}
   - component: {fileID: 1362008881}
   - component: {fileID: 1362008879}
-  - component: {fileID: 1362008880}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -543,19 +542,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u3042\u308A\u304C\u3068\u3046\u3001\u304A\u304B\u3052\u3067\u697D\u306B\u306A\u3063\u305F\u3088"
---- !u!114 &1362008880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1362008877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe2ba004d7d8f145ae12cc491e05887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 10
-  Text_Score: {fileID: 0}
 --- !u!222 &1362008881
 CanvasRenderer:
   m_ObjectHideFlags: 0

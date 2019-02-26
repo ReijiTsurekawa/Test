@@ -6,13 +6,14 @@ public class Enemy_pop : MonoBehaviour
 {
     float Enex;
     float Enez;
+    int SelE;
     public int xPlus, xMinus;//乱数のやつ
     public int zPlus, zMinus;
     public int maxCount;
     private int count = 0;
     Vector3 Pos;
 
-    public GameObject Ene;
+    public GameObject[] Ene;
 
     void OnTriggerStay(Collider col)
     {
@@ -21,14 +22,15 @@ public class Enemy_pop : MonoBehaviour
             //　プレイヤーキャラクターを発見
             if (col.tag == "Player")
             {
-               // GameObject Enemy = new GameObject("Enemys");
+                // GameObject Enemy = new GameObject("Enemys");
                 Pos = this.transform.position;
                 for (int i = 0; i < 10; i++)
                 {
                     Enex = Random.Range(Pos.x + xPlus, Pos.x - xMinus);
                     Enez = Random.Range(Pos.z + zPlus, Pos.z - zMinus);
+                    SelE = Random.Range(0, 2);
 
-                    GameObject Set = Instantiate(Ene, new Vector3(Enex, 23.0f, Enez), Quaternion.identity);
+                    GameObject Set = Instantiate(Ene[SelE], new Vector3(Enex, 60.0f, Enez), Quaternion.identity);
                     //Debug.Log(Enex);
                     //Debug.Log(Enez);
                 }

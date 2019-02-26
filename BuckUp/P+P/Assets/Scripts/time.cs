@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class time : MonoBehaviour
 {
     public Text timerText;
+    public Text Fin;
 
     public float totalTime;
     int seconds;
@@ -42,6 +43,7 @@ public class time : MonoBehaviour
     void Start()
     {
         next_step = STEP.SET;    // 最初はSETから.
+        Fin.GetComponent<Text>().enabled = false;
     }
 
     void Update()
@@ -74,7 +76,7 @@ public class time : MonoBehaviour
                 totalTime -= Time.deltaTime;
                 seconds = (int)totalTime;
                 timerText.text ="Time:" +seconds.ToString();
-                Debug.Log("Play終わり");
+                //Debug.Log("Play終わり");
                 if (seconds==0)
                 {
                     next_step = STEP.CLEAR;
@@ -83,6 +85,7 @@ public class time : MonoBehaviour
             case STEP.CLEAR:
                 Debug.Log("クリア");
                 num = 1;
+                Fin.GetComponent<Text>().enabled = true;
                 if (step_timer > 5.0f)
                 {
                     SceneManager.LoadScene("result");
