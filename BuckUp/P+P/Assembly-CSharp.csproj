@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\EnemyCollapse.cs" />
     <Compile Include="Assets\Scripts\Engine.cs" />
     <Compile Include="Assets\Scripts\enmydisp.cs" />
+    <Compile Include="Assets\Scripts\Esc.cs" />
     <Compile Include="Assets\Scripts\fpPlayercamera.cs" />
     <Compile Include="Assets\Scripts\g.cs" />
     <Compile Include="Assets\Scripts\GameControl.cs" />
